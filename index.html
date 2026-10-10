@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trần Phương Diễm - Thiết kế Đồ hoạ // ĐH Kiến trúc Hà Nội (2023 - 2027)</title>
+  <meta name="description"
+    content="Portfolio thiết kế đồ họa của Trần Phương Diễm, sinh viên khóa 2023-2027 Đại học Kiến trúc Hà Nội (HAU). Chuyên về Brand Identity, Packaging, Sách & Typography." />
+  <meta name="keywords"
+    content="Trần Phương Diễm, Graphic Design, HAU, Đại học Kiến trúc Hà Nội, 2023-2027, Portfolio, Nghệ thuật" />
+
+  <!-- Google Fonts: 100% chuẩn Tiếng Việt, uốn lượn nghệ thuật & tròn trịa dễ thương -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,500;1,600;1,700&family=Quicksand:wght@400;500;600;700&display=swap&subset=vietnamese"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body class="bg-milk-paper text-ink selection-strawberry">
+
+  <!-- Canvas tạo độ nhám giấy mỹ thuật nhẹ nhàng -->
+  <canvas id="noise-canvas" class="noise-overlay" aria-hidden="true"></canvas>
+
+  <!-- Custom Magnetic Cursor (Đỏ dâu & Vàng bơ mềm mại) -->
+  <div id="custom-cursor" class="custom-cursor" aria-hidden="true">
+    <div class="cursor-dot"></div>
+    <div class="cursor-follower">
+      <span class="cursor-text">xem</span>
+    </div>
+  </div>
+
+  <!-- Preloader Screen (Nhẹ nhàng, đếm % bồng bềnh) -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-meta">
+        <span class="sparkle-tag">TRẦN PHƯƠNG DIỄM // KHÓA 2023 - 2027</span>
+        <span class="sparkle-inst">ĐẠI HỌC KIẾN TRÚC HÀ NỘI</span>
+      </div>
+      <div class="preloader-counter">
+        <span id="counter-val">00</span><span class="percent">%</span>
+      </div>
+      <div class="preloader-bar-wrap">
+        <div id="preloader-bar" class="preloader-bar"></div>
+      </div>
+      <div class="preloader-footer">
+        <span>Đang mở portfolio của Diễm...</span>
+        <span>Khóa 2023 - 2027 // HAU</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Image Preview for List Hover -->
+  <div id="floating-preview" class="floating-preview" aria-hidden="true">
+    <div class="floating-preview-inner">
+      <img id="floating-preview-img" src="" alt="Project Preview" />
+    </div>
+  </div>
+
+  <!-- HEADER NAVIGATION -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="#hero" class="brand-monogram hover-target" data-cursor="Trần Phương Diễm">
+        <div class="brand-avatar-mini">
+          <img src="/assets/avt.webp" alt="Diễm" />
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">Phương Diễm</span>
+          <span class="brand-sub">ĐH Kiến trúc Hà Nội '23-'27</span>
+        </div>
+      </a>
+
+      <div class="header-coords desktop-only">
+        <span class="coord-dot"></span>
+        <span class="coord-text">Hà Nội // <span id="live-time">13:00:00</span> GMT+7</span>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#works" class="nav-item hover-target">Đồ án</a>
+        <a href="#ethos" class="nav-item hover-target">Cảm xúc</a>
+        <a href="#about" class="nav-item hover-target">Về mình</a>
+        <a href="#contact" class="nav-item hover-target">Liên hệ</a>
+      </nav>
+
+      <a href="#contact" class="btn-magnetic btn-primary-pill hover-target desktop-only" data-cursor="nhắn mình">
+        <span>Gửi thư cho mình &rarr;</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- SECTION 1: HERO (Bố cục có ảnh Avatar của Diễm, Khóa 2023-2027) -->
+    <section id="hero" class="hero-section">
+      <div class="hero-container">
+        <div class="hero-meta-top">
+          <div class="tag-chip">
+            <span class="status-indicator"></span>
+            <span>TRẦN PHƯƠNG DIỄM // KHÓA 2023 - 2027</span>
+          </div>
+          <div class="hero-sub-school">
+            ĐẠI HỌC KIẾN TRÚC HÀ NỘI (HAU)
+          </div>
+        </div>
+
+        <div class="hero-main-layout">
+          <!-- Cột Trái: Typography Nghệ Thuật & Mô Tả -->
+          <div class="hero-content-col">
+            <div class="hero-title-wrap">
+              <div class="hero-line hero-line-1">
+                <h1 class="hero-title font-serif-italic">Trần Phương Diễm</h1>
+              </div>
+              <div class="hero-line hero-line-2">
+                <div class="hero-subtitle">
+                  <span class="font-sans font-bold">Graphic Designer</span>
+                  <span class="subtitle-tag font-cursive text-strawberry">&amp; Visual Creator</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="hero-desc">
+              Sinh viên khóa <strong>2023 - 2027</strong> ngành <strong>Thiết kế Đồ họa</strong> tại <strong>Đại học
+                Kiến trúc Hà Nội</strong>.
+              Mình thực hành thiết kế với tình yêu dành cho sự dịu dàng của con chữ, nét ấm áp của giấy in thủ công và
+              những giải pháp nhận diện thương hiệu bền vững, chạm đến cảm xúc người xem.
+            </p>
+
+            <div class="hero-tags">
+              <span class="pill-mini">Nhận diện thương hiệu</span>
+              <span class="pill-mini">Thiết kế bao bì</span>
+              <span class="pill-mini">Dàn trang sách &amp; Typo</span>
+              <span class="pill-mini">Đồ án tốt nghiệp 2027</span>
+            </div>
+          </div>
+
+          <!-- Cột Phải: Khung Ảnh Avatar Của Diễm -->
+          <div class="hero-avatar-col">
+            <div class="hero-avatar-card hover-target" data-cursor="Diễm nè">
+              <div class="hero-avatar-frame">
+                <img src="/assets/avt.webp" alt="Trần Phương Diễm - Sinh viên Thiết kế Đồ hoạ ĐH Kiến trúc Hà Nội"
+                  class="hero-avatar-img" />
+              </div>
+              <div class="hero-avatar-caption">
+                <div class="caption-name font-serif-italic">Trần Phương Diễm</div>
+                <div class="caption-sub">ĐH Kiến trúc Hà Nội // 2023 - 2027</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-bottom-bar">
+          <div class="hero-scroll-cue hover-target" id="scroll-to-works" data-cursor="cuộn nhé">
+            <div class="scroll-mouse">
+              <div class="scroll-wheel"></div>
+            </div>
+            <span class="text-sm">Xem 07 đồ án yêu thích của mình &darr;</span>
+          </div>
+
+          <div class="hero-stats desktop-only">
+            <div><span>Chuyên ngành:</span> Thiết kế Đồ họa</div>
+            <div><span>Khóa học:</span> 2023 - 2027 (HAU)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: MANIFESTO / ETHOS (Cảm Xúc Nghệ Thuật) -->
+    <section id="ethos" class="ethos-section">
+      <div class="section-container">
+        <div class="section-header-compact">
+          <span class="section-badge font-cursive text-strawberry text-xl">Cảm xúc sáng tạo</span>
+          <span class="text-dim text-sm">NHỊP ĐIỆU CỦA DIỄM</span>
+        </div>
+
+        <div class="ethos-quote-block">
+          <p class="ethos-statement">
+            "Với mình, thiết kế đồ hoạ giống như <span class="font-cursive text-strawberry text-glow">một bài thơ dịu
+              dàng</span> được viết bằng màu sắc, hình khối và sự nâng niu từng thớ giấy in."
+          </p>
+        </div>
+
+        <div class="ethos-pillars">
+          <div class="pillar-card">
+            <div class="pillar-num font-serif-italic">01.</div>
+            <h3 class="pillar-title">Sự nhẹ nhàng &amp; Ấm áp</h3>
+            <p class="pillar-desc">
+              Mình thích sự kết hợp giữa sắc đỏ son tươi vui và màu vàng bơ ấm áp, tạo cảm giác thân thiện, trong trẻo
+              và dễ chịu cho đôi mắt.
+            </p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-num font-serif-italic">02.</div>
+            <h3 class="pillar-title">Nét uốn lượn tinh tế</h3>
+            <p class="pillar-desc">
+              Chữ viết và bố cục không cần quá khô cứng. Mình thích đưa vào các đường lượn mềm mại, uyển chuyển để mỗi
+              thiết kế đều có nhịp điệu riêng.
+            </p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-num font-serif-italic">03.</div>
+            <h3 class="pillar-title">Chất liệu xúc giác</h3>
+            <p class="pillar-desc">
+              Từ giấy mỹ thuật có gân, bao bì mở hộp dễ thương đến kỹ thuật ép nhũ vàng lấp lánh - mình luôn chăm chút
+              từng điểm chạm nhỏ nhất.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: SELECTED WORKS (Triển Lãm Đồ Án) -->
+    <section id="works" class="works-section">
+      <div class="section-container">
+        <div class="works-header-bar">
+          <div>
+            <span class="section-badge font-cursive text-strawberry text-xl">Tác phẩm tuyển chọn</span>
+            <h2 class="section-heading font-serif-italic">07 Đồ Án Của Mình</h2>
+          </div>
+
+          <div class="works-controls">
+            <!-- Filter Categories -->
+            <div class="filter-group" id="filter-group">
+              <button class="filter-btn active hover-target" data-filter="all">Tất cả (7)</button>
+              <button class="filter-btn hover-target" data-filter="Brand Identity">Branding</button>
+              <button class="filter-btn hover-target" data-filter="Packaging Design">Bao bì</button>
+              <button class="filter-btn hover-target" data-filter="Editorial & Publication">Sách báo</button>
+              <button class="filter-btn hover-target" data-filter="Graduation Project">Tốt nghiệp</button>
+            </div>
+
+            <!-- View Mode Switcher -->
+            <div class="view-toggle desktop-only">
+              <button id="view-list-btn" class="toggle-btn active hover-target" title="Xem danh sách">
+                Danh sách
+              </button>
+              <button id="view-grid-btn" class="toggle-btn hover-target" title="Xem dạng thẻ">
+                Lưới ảnh
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- LIST VIEW -->
+        <div id="projects-list-container" class="projects-list-view">
+          <!-- Rendered dynamically by main.js -->
+        </div>
+
+        <!-- GRID VIEW -->
+        <div id="projects-grid-container" class="projects-grid-view hidden">
+          <!-- Rendered dynamically by main.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: ABOUT & EDUCATION (Về Mình) -->
+    <section id="about" class="about-section">
+      <div class="section-container">
+        <div class="section-header-compact">
+          <span class="section-badge font-cursive text-strawberry text-xl">Một chút về Diễm</span>
+          <span class="text-dim text-sm">HỌC TẬP &amp; ĐAM MÊ</span>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-col-left">
+            <div class="about-portrait-card">
+              <div class="portrait-header">
+                <span>THẺ SINH VIÊN</span>
+                <span>HAU // 2023 - 2027</span>
+              </div>
+              <div class="portrait-visual">
+                <!-- Ảnh Avatar của Diễm -->
+                <div class="about-avatar-wrap">
+                  <img src="/assets/avt.webp" alt="Trần Phương Diễm" class="about-avatar-img" />
+                </div>
+              </div>
+              <div class="portrait-footer">
+                <div class="font-serif-italic font-bold text-2xl text-strawberry">Trần Phương Diễm</div>
+                <div class="text-xs text-butter font-bold">KHÓA 2023 - 2027 // THIẾT KẾ ĐỒ HOẠ</div>
+                <div class="text-sm text-dim">Trường Đại học Kiến trúc Hà Nội</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-col-right">
+            <h2 class="about-lead font-serif-italic">
+              Mình tin rằng một thiết kế đẹp là thiết kế mang lại <span class="text-strawberry font-cursive">sự dịu dàng
+                và niềm vui</span> cho người ngắm nhìn.
+            </h2>
+            <p class="about-body">
+              Chào bạn, mình là Diễm. Trong suốt những năm tháng học tập tại Đại học Kiến trúc Hà Nội (khóa 2023 -
+              2027), mình đã được nuôi dưỡng niềm say mê với những con chữ uốn lượn, bố cục gãy gọn và chất liệu giấy in
+              ấm áp. Mình yêu thích cảm giác biến những ý tưởng mộc mạc thành một bộ nhận diện thương hiệu hoàn chỉnh,
+              một chiếc hộp bánh xinh xắn hay một cuốn artbook lưu giữ kỷ niệm.
+            </p>
+
+            <div class="about-blocks">
+              <div class="info-block">
+                <h4 class="info-block-title">HÀNH TRÌNH HỌC TẬP</h4>
+                <div class="timeline-entry">
+                  <div class="timeline-year text-strawberry font-bold">2023 - 2027</div>
+                  <div class="timeline-content">
+                    <div class="timeline-role font-bold">Cử nhân Thiết kế Đồ họa (Graphic Design)</div>
+                    <div class="timeline-school text-dim">Khoa Thiết kế Đồ họa - Trường Đại học Kiến trúc Hà Nội (HAU)
+                    </div>
+                  </div>
+                </div>
+                <div class="timeline-entry">
+                  <div class="timeline-year text-strawberry font-bold">2025</div>
+                  <div class="timeline-content">
+                    <div class="timeline-role font-bold">Triển lãm Đồ án Sinh viên Kiến trúc</div>
+                    <div class="timeline-school text-dim">Trưng bày Đồ án Nhận diện &amp; Bao bì Văn hoá Dân gian</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="info-block">
+                <h4 class="info-block-title">CÔNG CỤ &amp; KỸ NĂNG MÌNH DÙNG</h4>
+                <div class="skills-tags">
+                  <span class="skill-tag">Nhận diện thương hiệu</span>
+                  <span class="skill-tag">Thiết kế bao bì</span>
+                  <span class="skill-tag">Dàn trang sách &amp; Zine</span>
+                  <span class="skill-tag">Nghệ thuật Typography</span>
+                  <span class="skill-tag">Kỹ thuật in ấn &amp; Ép nhũ</span>
+                  <span class="skill-tag">Adobe Illustrator</span>
+                  <span class="skill-tag">Adobe InDesign</span>
+                  <span class="skill-tag">Adobe Photoshop</span>
+                  <span class="skill-tag">Blender 3D</span>
+                  <span class="skill-tag">Figma</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: FOOTER CONTACT (Nhắn Tin Cho Mình) -->
+    <section id="contact" class="footer-cta-section">
+      <div class="section-container">
+        <div class="cta-top-stamp">
+          <span>LIÊN HỆ &amp; HỢP TÁC</span>
+          <span>SẴN SÀNG CHO NHỮNG ĐỒ ÁN MỚI</span>
+        </div>
+
+        <div class="cta-content-wrap">
+          <h2 class="cta-title">
+            Cùng mình tạo nên<br />
+            <span class="font-cursive text-strawberry text-glow">những điều xinh xắn nhé</span>
+          </h2>
+          <p class="cta-sub">
+            Nếu bạn đang ấp ủ một dự án nhận diện, bao bì, sách nghệ thuật, hay đơn giản chỉ muốn trò chuyện về thiết kế
+            - đừng ngần ngại gửi thư cho mình nhé!
+          </p>
+
+          <div class="cta-actions">
+            <a href="mailto:trandiem1872005@gmail.com" class="btn-magnetic-giant hover-target" data-cursor="gửi thư">
+              <span class="btn-bg"></span>
+              <span class="btn-label">trandiem1872005@gmail.com &nearr;</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-bottom-grid">
+          <div class="footer-col">
+            <div class="text-xs text-dim">MẠNG XÃ HỘI CỦA MÌNH</div>
+            <div class="social-links">
+              <a href="https://behance.net" target="_blank" rel="noopener" class="social-link hover-target">Behance
+                &nearr;</a>
+              <a href="https://instagram.com" target="_blank" rel="noopener" class="social-link hover-target">Instagram
+                &nearr;</a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-link hover-target">LinkedIn
+                &nearr;</a>
+              <a href="#" class="social-link hover-target">Tải CV của mình (PDF) &darr;</a>
+            </div>
+          </div>
+
+          <div class="footer-col text-right-desktop">
+            <div class="text-xs text-dim">BẢN QUYỀN</div>
+            <p class="text-xs text-muted mt-2">
+              Thiết kế bởi Trần Phương Diễm<br />
+              &copy; 2026-2027 Trần Phương Diễm. All rights reserved.<br />
+              Trường Đại học Kiến trúc Hà Nội (Khóa 2023 - 2027).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- CASE STUDY MODAL DRAWER VỚI TRÌNH DUYỆT ẢNH INTERACTIVE SLIDER -->
+  <div id="project-modal" class="project-modal" aria-hidden="true" role="dialog">
+    <div class="modal-backdrop"></div>
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-project-code text-strawberry font-bold" id="modal-code">HAU // Đồ án số 01</div>
+        <button id="modal-close-btn" class="modal-close-btn hover-target" data-cursor="đóng" aria-label="Đóng">
+          <span>&times; Đóng (ESC)</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Interactive Image Slider Container (Bấm chuyển ảnh mượt mà ngay trên ảnh) -->
+        <div class="modal-slider-wrap">
+          <div class="modal-slider-viewport">
+            <img id="modal-cover-img" src="" alt="Project Showcase" class="modal-hero-img" />
+
+            <!-- Nút mũi tên chuyển ảnh mượt mà trái / phải -->
+            <button id="slider-prev-btn" class="slider-arrow slider-arrow-prev hover-target" data-cursor="ảnh trước"
+              aria-label="Ảnh trước">
+              <span>&larr;</span>
+            </button>
+            <button id="slider-next-btn" class="slider-arrow slider-arrow-next hover-target" data-cursor="ảnh sau"
+              aria-label="Ảnh sau">
+              <span>&rarr;</span>
+            </button>
+
+            <!-- Bộ đếm số ảnh đang xem (ví dụ: 01 / 04) -->
+            <div class="slider-counter font-mono" id="slider-counter">01 / 04</div>
+          </div>
+
+          <!-- Dải Thumbnails bấm chọn ảnh tức thì -->
+          <div class="modal-thumbnails-strip" id="modal-thumbnails"></div>
+        </div>
+
+        <div class="modal-details-grid">
+          <div class="modal-meta-sidebar">
+            <div class="modal-meta-item">
+              <span class="text-dim text-xs">CHUYÊN MỤC</span>
+              <span id="modal-category" class="font-bold text-strawberry">Brand Identity</span>
+            </div>
+            <div class="modal-meta-item">
+              <span class="text-dim text-xs">NĂM THỰC HIỆN</span>
+              <span id="modal-year" class="font-bold">2027</span>
+            </div>
+            <div class="modal-meta-item">
+              <span class="text-dim text-xs">VAI TRÒ CỦA MÌNH</span>
+              <span id="modal-role">Art Direction &amp; Branding</span>
+            </div>
+            <div class="modal-meta-item">
+              <span class="text-dim text-xs">HẠNG MỤC BÀN GIAO</span>
+              <ul id="modal-deliverables" class="modal-deliverables-list"></ul>
+            </div>
+          </div>
+
+          <div class="modal-content-main">
+            <h2 id="modal-title" class="modal-title font-serif-italic">The Crimson &amp; Gold Monogram</h2>
+            <div class="modal-summary font-semibold text-lg text-strawberry" id="modal-summary"></div>
+            <div class="modal-concept-body mt-4">
+              <h4 class="text-xs text-dim">Ý TƯỞNG CỦA MÌNH</h4>
+              <p id="modal-concept" class="text-base text-muted leading-relaxed mt-2"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer-nav">
+          <button id="modal-prev-btn" class="modal-nav-btn hover-target">&larr; Đồ án trước</button>
+          <button id="modal-next-btn" class="modal-nav-btn hover-target">Đồ án tiếp theo &rarr;</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>

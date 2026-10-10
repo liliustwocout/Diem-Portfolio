@@ -6,7 +6,11 @@
     "category": "Brand Identity",
     "year": "2027",
     "role": "Art Direction & Branding",
-    "tags": ["Branding", "Grid System", "Gold Leaf"],
+    "tags": [
+      "Branding",
+      "Grid System",
+      "Gold Leaf"
+    ],
     "summary": "Bộ nhận diện thương hiệu nghệ thuật đương đại được mình lấy cảm hứng từ kỹ thuật dát vàng quỳ và sơn mài truyền thống.",
     "concept": "Trong đồ án này, mình muốn khám phá vẻ đẹp của sự giao thoa giữa cấu trúc lưới kiến trúc kỷ luật và nét uyển chuyển của nét chữ uốn lượn. Sắc đỏ son ngọt ngào kết hợp ánh vàng bơ ấm áp mang lại cảm giác thân thiện, thanh lịch và tràn đầy sức sống.",
     "deliverables": [
@@ -15,12 +19,12 @@
       "Ấn phẩm văn phòng ép nhũ vàng ấm",
       "Bộ quà tặng thủ công xinh xắn"
     ],
-    "coverImage": "/assets/projects/project-01/cover.svg",
+    "coverImage": "/assets/projects/project-01/cover.webp",
     "gallery": [
-      "/assets/projects/project-01/cover.svg",
-      "/assets/projects/project-01/mockup.svg",
-      "/assets/projects/project-01/grid-typo.svg",
-      "/assets/projects/project-01/details.svg"
+      "/assets/projects/project-01/cover.webp",
+      "/assets/projects/project-01/mockup.webp",
+      "/assets/projects/project-01/grid-typo.webp",
+      "/assets/projects/project-01/details.webp"
     ]
   },
   {
@@ -30,7 +34,11 @@
     "category": "Editorial & Publication",
     "year": "2026",
     "role": "Editorial Design & Layout",
-    "tags": ["Editorial", "Hà Nội", "Artbook"],
+    "tags": [
+      "Editorial",
+      "Hà Nội",
+      "Artbook"
+    ],
     "summary": "Tuyển tập sách nhỏ ghi lại những góc phố dịu dàng và nét đẹp kiến trúc Hà Nội qua góc nhìn của mình.",
     "concept": "Ấn phẩm được mình dàn trang tỉ mỉ như một cuốn nhật ký nghệ thuật. Mình chọn chất giấy ngả vàng ấm, kết hợp ảnh chụp phim và những dòng chữ uốn lượn nhẹ nhàng để bạn đọc như đang cùng mình thong thả dạo bước qua từng con ngõ nhỏ của Thủ đô.",
     "deliverables": [
@@ -54,7 +62,11 @@
     "category": "Packaging Design",
     "year": "2026",
     "role": "Packaging & Print Craft",
-    "tags": ["Packaging", "Trà Cổ Thụ", "Thủ Công"],
+    "tags": [
+      "Packaging",
+      "Trà Cổ Thụ",
+      "Thủ Công"
+    ],
     "summary": "Thiết kế bao bì hộp trà cổ thụ Tây Bắc với kết cấu mở hộp xinh xắn không dùng keo dán.",
     "concept": "Tôn vinh búp chè shan tuyết cổ thụ bằng ngôn ngữ đồ họa mộc mạc và ấm áp. Hộp giấy kraft bồi dày màu vàng bơ kết hợp đường viền chỉ đỏ son và biểu tượng mạ nhũ vàng kim tinh tế, mang lại trải nghiệm mở hộp đầy niềm vui và bất ngờ.",
     "deliverables": [
@@ -78,7 +90,11 @@
     "category": "Typography & Poster",
     "year": "2025",
     "role": "Experimental Poster",
-    "tags": ["Typography", "Đông Dương", "Poster"],
+    "tags": [
+      "Typography",
+      "Đông Dương",
+      "Poster"
+    ],
     "summary": "Chuỗi poster thể nghiệm nghệ thuật chữ uốn lượn, kết hợp giữa phong vị Đông Dương xưa và nhịp điệu đồ hoạ hiện đại.",
     "concept": "Mình tháo rời các con chữ bảng hiệu phố cổ, rồi vẽ lại bằng những đường lượn mềm mại và khối hình học tươi sáng. Sự rung động giữa sắc đỏ dâu và vàng ấm tạo cho chuỗi poster một nguồn năng lượng thị giác thật trong trẻo và duyên dáng.",
     "deliverables": [
@@ -101,7 +117,11 @@
     "category": "Spatial Graphics",
     "year": "2025",
     "role": "Wayfinding & Signage",
-    "tags": ["Không Gian", "Triển Lãm", "HAU"],
+    "tags": [
+      "Không Gian",
+      "Triển Lãm",
+      "HAU"
+    ],
     "summary": "Hệ thống biển chỉ dẫn và nhận diện không gian triển lãm sáng tạo cho sinh viên ĐH Kiến trúc Hà Nội.",
     "concept": "Mình thiết kế hệ thống ký hiệu hoa văn đáng yêu, kết hợp typography uốn lượn trên các lối đi và vách tường, biến không gian triển lãm khô cứng thành một khu vườn nghệ thuật rực rỡ sắc màu để mọi người cùng dạo chơi.",
     "deliverables": [
@@ -125,7 +145,11 @@
     "category": "Packaging Design",
     "year": "2024",
     "role": "Packaging & Structural Design",
-    "tags": ["Bao Bì", "Hữu Cơ", "Giấy Tái Chế"],
+    "tags": [
+      "Bao Bì",
+      "Hữu Cơ",
+      "Giấy Tái Chế"
+    ],
     "summary": "Thiết kế bao bì mỹ phẩm thuần chay sinh thái, ứng dụng chất liệu giấy xơ thực vật vàng ấm và mực in đậu nành.",
     "concept": "Kết hợp nét thanh lịch nhẹ nhàng với tình yêu dành cho thiên nhiên. Sắc vàng mật ong ấm áp kết hợp các điểm xuyết đỏ dâu trên nền giấy thủ công, gửi gắm thông điệp chăm sóc bản thân với sự nâng niu dịu dàng nhất.",
     "deliverables": [
@@ -149,7 +173,11 @@
     "category": "Graduation Project",
     "year": "2027",
     "role": "Lead Visual Designer",
-    "tags": ["Tốt Nghiệp", "Di Sản Hà Nội", "Capstone 2027"],
+    "tags": [
+      "Tốt Nghiệp",
+      "Di Sản Hà Nội",
+      "Capstone 2027"
+    ],
     "summary": "Đồ án Tốt nghiệp 2027: Dự án nghiên cứu bảo tồn và tái hiện nét đẹp hoa văn trên các công trình kiến trúc cổ Hà Nội.",
     "concept": "Đồ án tốt nghiệp kết tinh hành trình học tập khóa 2023-2027 của mình tại Đại học Kiến trúc Hà Nội. Mình đã thu thập, chụp ảnh và vector hoá các họa tiết hoa sắt, gạch hoa thông gió, gốm sứ cổ truyền thành một thư viện đồ hoạ ứng dụng hiện đại, ngọt ngào và tràn đầy sức sống mới.",
     "deliverables": [

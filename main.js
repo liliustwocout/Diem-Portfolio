@@ -85,54 +85,21 @@ function startLiveClock() {
 startLiveClock();
 
 // ==========================================================================
-// 4. CUSTOM MAGNETIC CURSOR & FLOATING PREVIEW (Dennis Snellenberg Style)
+// 4. FLOATING PREVIEW (Ảnh trôi nhẹ bên cạnh chuột khi xem danh sách)
 // ==========================================================================
-const cursorFollower = document.querySelector('.cursor-follower');
-const cursorDot = document.querySelector('.cursor-dot');
-const cursorText = document.querySelector('.cursor-text');
 const floatingPreview = document.getElementById('floating-preview');
 const floatingPreviewImg = document.getElementById('floating-preview-img');
 
-let quickFollowerX = gsap.quickTo(cursorFollower, 'x', { duration: 0.35, ease: 'power3.out' });
-let quickFollowerY = gsap.quickTo(cursorFollower, 'y', { duration: 0.35, ease: 'power3.out' });
-let quickDotX = gsap.quickTo(cursorDot, 'x', { duration: 0.1, ease: 'power2.out' });
-let quickDotY = gsap.quickTo(cursorDot, 'y', { duration: 0.1, ease: 'power2.out' });
-
-// Floating image lag interpolation
-let quickPreviewX = gsap.quickTo(floatingPreview, 'x', { duration: 0.5, ease: 'power3.out' });
-let quickPreviewY = gsap.quickTo(floatingPreview, 'y', { duration: 0.5, ease: 'power3.out' });
+let quickPreviewX = floatingPreview ? gsap.quickTo(floatingPreview, 'x', { duration: 0.3, ease: 'power3.out' }) : null;
+let quickPreviewY = floatingPreview ? gsap.quickTo(floatingPreview, 'y', { duration: 0.3, ease: 'power3.out' }) : null;
 
 window.addEventListener('mousemove', (e) => {
-  const { clientX, clientY } = e;
-  quickFollowerX(clientX);
-  quickFollowerY(clientY);
-  quickDotX(clientX);
-  quickDotY(clientY);
-
-  if (floatingPreview && floatingPreview.classList.contains('active')) {
-    quickPreviewX(clientX + 20);
-    quickPreviewY(clientY);
+  if (floatingPreview && floatingPreview.classList.contains('active') && quickPreviewX && quickPreviewY) {
+    // Đặt ảnh preview lệch hẳn sang bên phải con trỏ chuột để không che chữ và không che chuột
+    quickPreviewX(e.clientX + 28);
+    quickPreviewY(e.clientY - 60);
   }
 });
-
-function bindHoverTargets() {
-  document.querySelectorAll('.hover-target').forEach((el) => {
-    el.addEventListener('mouseenter', () => {
-      document.body.classList.add('is-hovering-target');
-      const text = el.getAttribute('data-cursor');
-      if (text) {
-        cursorText.textContent = text;
-        cursorText.style.opacity = '1';
-      }
-    });
-    el.addEventListener('mouseleave', () => {
-      document.body.classList.remove('is-hovering-target');
-      cursorText.textContent = 'xem ✿';
-      cursorText.style.opacity = '0';
-    });
-  });
-}
-bindHoverTargets();
 
 // ==========================================================================
 // 5. PROJECTS DATA MANAGEMENT & RENDERING (7 Đồ án kiến trúc & đồ họa)
@@ -412,15 +379,28 @@ function openProjectModal(index) {
   updateSliderImage(0, false);
 
   modal.classList.add('active');
-  lenis.stop(); // Tạm dừng cuộn mượt nền khi mở modal
+  const modalBody = modal.querySelector('.modal-body');
+  if (modalBody) modalBody.scrollTop = 0;
+  document.body.style.overflow = 'hidden';
+  lenis.stop();
   if (floatingPreview) floatingPreview.classList.remove('active');
-  bindHoverTargets();
 }
 
 function closeProjectModal() {
   modal.classList.remove('active');
-  lenis.start(); // Tiếp tục cuộn
+  document.body.style.overflow = '';
+  lenis.start();
 }
+
+// Bắt sự kiện lăn chuột (mouse wheel) trực tiếp trên modal
+// Giúp lăn chuột bất cứ vị trí nào trong modal cũng cuộn mượt mà mà không bị Lenis chặn
+const modalBodyElement = modal?.querySelector('.modal-body');
+modal?.addEventListener('wheel', (e) => {
+  if (modal.classList.contains('active') && modalBodyElement) {
+    e.stopPropagation();
+    modalBodyElement.scrollTop += e.deltaY;
+  }
+}, { passive: true });
 
 // Gắn sự kiện đóng modal
 modalCloseBtn?.addEventListener('click', closeProjectModal);
@@ -448,7 +428,7 @@ modalNextBtn?.addEventListener('click', () => {
   openProjectModal(newIdx);
 });
 
-// Phím tắt điều hướng: ESC đóng modal, Mũi tên Trái/Phải chuyển ảnh
+// Phím tắt điều hướng: ESC đóng modal, Mũi tên Trái/Phải chuyển ảnh, Lên/Xuống cuộn nội dung
 window.addEventListener('keydown', (e) => {
   if (!modal.classList.contains('active')) return;
 
@@ -458,6 +438,10 @@ window.addEventListener('keydown', (e) => {
     updateSliderImage(currentImageIndex - 1, true);
   } else if (e.key === 'ArrowRight') {
     updateSliderImage(currentImageIndex + 1, true);
+  } else if (e.key === 'ArrowDown') {
+    if (modalBodyElement) modalBodyElement.scrollTop += 80;
+  } else if (e.key === 'ArrowUp') {
+    if (modalBodyElement) modalBodyElement.scrollTop -= 80;
   }
 });
 

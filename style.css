@@ -136,89 +136,20 @@ img {
 }
 
 /* ==========================================================================
-   CUSTOM MAGNETIC CURSOR (Dễ Thương, Tròn Trịa)
+   CON TRỎ CHUỘT MẶC ĐỊNH (Tự nhiên, không bị che nội dung)
    ========================================================================== */
-.custom-cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 9999;
-}
-
-.cursor-dot {
-  position: fixed;
-  top: -4px;
-  left: -4px;
-  width: 8px;
-  height: 8px;
-  background-color: var(--color-strawberry);
-  border-radius: 50%;
-  pointer-events: none;
-  transition: transform 0.15s ease-out, opacity 0.2s ease;
-  z-index: 10000;
-}
-
+.custom-cursor,
+.cursor-dot,
 .cursor-follower {
-  position: fixed;
-  top: -24px;
-  left: -24px;
-  width: 48px;
-  height: 48px;
-  border: 1.8px solid var(--color-butter);
-  background-color: rgba(229, 169, 60, 0.15);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
-  transition: width 0.3s var(--ease-bouncy),
-              height 0.3s var(--ease-bouncy),
-              background-color 0.3s var(--ease-soft),
-              border-color 0.3s var(--ease-soft),
-              border-radius 0.3s var(--ease-bouncy);
-  will-change: transform;
+  display: none !important;
 }
 
-.cursor-text {
-  font-family: var(--font-cursive);
-  font-size: 15px;
-  color: #FFFFFF;
-  opacity: 0;
-  transition: opacity 0.2s ease;
-  white-space: nowrap;
-}
-
-/* Cursor Hover States */
-body.is-hovering-target .cursor-follower {
-  width: 65px;
-  height: 65px;
-  top: -32px;
-  left: -32px;
-  background-color: rgba(230, 57, 70, 0.18);
-  border-color: var(--color-strawberry);
-}
-
-body.is-hovering-project .cursor-follower {
-  width: 86px;
-  height: 86px;
-  top: -43px;
-  left: -43px;
-  background-color: var(--color-strawberry);
-  border-color: #FFFFFF;
-  box-shadow: 0 8px 25px var(--color-strawberry-glow);
-}
-
-body.is-hovering-project .cursor-text {
-  opacity: 1;
-}
-
-body.is-hovering-project .cursor-dot {
-  opacity: 0;
-}
-
-@media (pointer: coarse), (max-width: 991px) {
-  .custom-cursor { display: none !important; }
+/* Các thành phần tương tác hiển thị chuột pointer rõ ràng */
+a, button, [role="button"], 
+.project-card, .project-list-row, 
+.thumbnail-item, .slider-arrow, 
+.filter-btn, .toggle-btn, .nav-item {
+  cursor: pointer;
 }
 
 /* ==========================================================================
@@ -630,6 +561,37 @@ body.is-hovering-project .cursor-dot {
   transform: translateY(-8px) rotate(1deg);
   border-color: var(--color-strawberry);
   box-shadow: 0 28px 60px rgba(230, 57, 70, 0.22);
+}
+
+/* Sticker badge 'Diễm nè' xinh xắn đính góc ảnh */
+.avatar-cute-badge {
+  position: absolute;
+  top: 1.4rem;
+  right: 1.4rem;
+  z-index: 20;
+  background: linear-gradient(135deg, var(--color-strawberry), #FF6584);
+  color: #FFFFFF;
+  font-family: var(--font-cursive);
+  font-size: 1.15rem;
+  font-weight: 700;
+  padding: 0.35rem 0.95rem;
+  border-radius: 999px;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 6px 18px rgba(230, 57, 70, 0.35);
+  pointer-events: none;
+  user-select: none;
+  transform: rotate(6deg);
+  transition: transform 0.35s var(--ease-bouncy);
+  animation: cute-badge-float 3s infinite ease-in-out;
+}
+
+.hero-avatar-card:hover .avatar-cute-badge {
+  transform: rotate(-3deg) scale(1.1);
+}
+
+@keyframes cute-badge-float {
+  0%, 100% { transform: translateY(0) rotate(6deg); }
+  50% { transform: translateY(-4px) rotate(3deg); }
 }
 
 .hero-avatar-frame {
@@ -1333,6 +1295,7 @@ body.is-hovering-project .cursor-dot {
   flex-direction: column;
   transform: translateX(100%);
   transition: transform 0.5s var(--ease-soft);
+  overscroll-behavior: contain;
 }
 
 .project-modal.active .modal-container {
@@ -1346,6 +1309,7 @@ body.is-hovering-project .cursor-dot {
   align-items: center;
   border-bottom: 1.5px solid rgba(229, 169, 60, 0.25);
   background-color: var(--color-surface-warm);
+  flex-shrink: 0;
 }
 
 .modal-close-btn {
@@ -1357,6 +1321,7 @@ body.is-hovering-project .cursor-dot {
   border-radius: 999px;
   font-weight: 700;
   transition: all 0.2s ease;
+  cursor: pointer;
 }
 
 .modal-close-btn:hover {
@@ -1367,11 +1332,28 @@ body.is-hovering-project .cursor-dot {
 
 .modal-body {
   padding: 2.5rem;
-  overflow-y: auto;
+  overflow-y: auto !important;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 2.2rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-strawberry) var(--color-surface-warm);
+}
+
+.modal-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+  background: var(--color-surface-warm);
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+  background: var(--color-strawberry);
+  border-radius: 4px;
 }
 
 /* Interactive Image Slider Trong Modal */

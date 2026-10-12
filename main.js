@@ -129,7 +129,6 @@ function renderProjects() {
   renderListView(filtered);
   renderGridView(filtered);
   bindProjectInteractions();
-  bindHoverTargets();
 }
 
 // Render List View (Kiểu Dennis Snellenberg)
@@ -446,18 +445,53 @@ window.addEventListener('keydown', (e) => {
 });
 
 // ==========================================================================
-// 7. PRELOADER & HERO ENTRANCE TIMELINE (Animation chào sân nghệ thuật)
+// 7. PRELOADER & HERO ENTRANCE TIMELINE (Animation chào sân nghệ thuật - Phóng to đầu vào)
 // ==========================================================================
 function initPreloaderAndHero() {
   const preloader = document.getElementById('preloader');
   const counterVal = document.getElementById('counter-val');
   const bar = document.getElementById('preloader-bar');
 
+  // 1. ANIMATION ĐẦU VÀO CỦA TRANG LOADING: Mọi thứ phóng to dần lên (Scale-up entrance)
+  const preloaderInTl = gsap.timeline();
+  preloaderInTl
+    .fromTo('.preloader-inner', 
+      { scale: 0.52, opacity: 0 },
+      { scale: 1, opacity: 1, duration: 0.85, ease: 'back.out(1.5)' }
+    )
+    .fromTo('.preloader-avatar', 
+      { scale: 0, rotation: -20, opacity: 0 },
+      { scale: 1, rotation: 0, opacity: 1, duration: 0.75, ease: 'back.out(1.8)' },
+      '-=0.6'
+    )
+    .fromTo('.preloader-meta', 
+      { y: -20, opacity: 0, scale: 0.85 },
+      { y: 0, opacity: 1, scale: 1, duration: 0.6, ease: 'power3.out' },
+      '-=0.5'
+    )
+    .fromTo('.preloader-counter', 
+      { scale: 0.6, opacity: 0 },
+      { scale: 1, opacity: 1, duration: 0.85, ease: 'back.out(1.6)' },
+      '-=0.45'
+    )
+    .fromTo('.preloader-bar-wrap', 
+      { scaleX: 0, opacity: 0 },
+      { scaleX: 1, opacity: 1, duration: 0.65, ease: 'power3.out' },
+      '-=0.35'
+    )
+    .fromTo('.preloader-footer', 
+      { y: 20, opacity: 0, scale: 0.88 },
+      { y: 0, opacity: 1, scale: 1, duration: 0.65, ease: 'power3.out' },
+      '-=0.4'
+    );
+
+  // 2. COUNTER ĐẾM % TỪ 00 -> 100
   let count = { val: 0 };
 
   gsap.to(count, {
     val: 100,
     duration: 1.8,
+    delay: 0.15,
     ease: 'power2.inOut',
     onUpdate: () => {
       const cur = Math.floor(count.val);
@@ -465,16 +499,30 @@ function initPreloaderAndHero() {
       if (bar) bar.style.width = `${cur}%`;
     },
     onComplete: () => {
-      // Kết thúc đếm %, kéo màn đỏ cuộn lên trên
-      preloader?.classList.add('is-loaded');
+      // 3. ĐẠT 100%: PHÓNG TO BỪNG SÁNG (Scale-up crescendo) TRƯỚC KHI MỞ MÀN
+      gsap.to('.preloader-inner', {
+        scale: 1.15,
+        opacity: 0,
+        duration: 0.5,
+        ease: 'power2.in',
+        onComplete: () => {
+          preloader?.classList.add('is-loaded');
 
-      // Kích hoạt timeline mở màn Hero Section
-      const heroTl = gsap.timeline({ delay: 0.2 });
-      heroTl
-        .from('.hero-meta-top', { y: 25, opacity: 0, duration: 0.8, ease: 'power3.out' })
-        .from('.hero-title', { y: 120, opacity: 0, stagger: 0.15, duration: 1.1, ease: 'power4.out' }, '-=0.5')
-        .from('.hero-sub-block', { y: 30, opacity: 0, duration: 0.8, ease: 'power3.out' }, '-=0.6')
-        .from('.hero-bottom-bar', { opacity: 0, duration: 0.8, ease: 'power2.out' }, '-=0.4');
+          // 4. KÍCH HOẠT TIMELINE MỞ MÀN HERO: Toàn bộ website phóng to chào đón người xem
+          const heroTl = gsap.timeline({ delay: 0.1 });
+          heroTl
+            .fromTo('#hero .hero-container',
+              { scale: 0.88, opacity: 0, transformOrigin: 'center center' },
+              { scale: 1, opacity: 1, duration: 1.2, ease: 'power3.out' }
+            )
+            .from('.hero-meta-top', { y: 25, scale: 0.9, opacity: 0, duration: 0.8, ease: 'back.out(1.5)' }, '-=0.9')
+            .from('.hero-title-wrap', { y: 50, scale: 0.88, opacity: 0, duration: 1.0, ease: 'power4.out' }, '-=0.7')
+            .from('.hero-desc', { y: 25, opacity: 0, duration: 0.8, ease: 'power3.out' }, '-=0.6')
+            .from('.hero-tags', { y: 20, scale: 0.92, opacity: 0, duration: 0.7, ease: 'power3.out' }, '-=0.5')
+            .from('.hero-avatar-card', { scale: 0.75, opacity: 0, rotation: -3, duration: 1.0, ease: 'back.out(1.5)' }, '-=0.7')
+            .from('.hero-bottom-bar', { y: 20, opacity: 0, duration: 0.8, ease: 'power2.out' }, '-=0.5');
+        }
+      });
     }
   });
 }

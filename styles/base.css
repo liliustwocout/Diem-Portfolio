@@ -1,0 +1,4 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: #fff; }
+img { display: block; width: 100%; height: auto; user-select: none; }
+.hidden { display: none !important; }

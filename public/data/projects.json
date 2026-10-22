@@ -2,196 +2,146 @@
   {
     "id": "01",
     "slug": "project-01",
-    "title": "The Crimson & Gold Monogram",
-    "category": "Brand Identity",
-    "year": "2027",
-    "role": "Art Direction & Branding",
-    "tags": [
-      "Branding",
-      "Grid System",
-      "Gold Leaf"
-    ],
-    "summary": "Bộ nhận diện thương hiệu nghệ thuật đương đại được mình lấy cảm hứng từ kỹ thuật dát vàng quỳ và sơn mài truyền thống.",
-    "concept": "Trong đồ án này, mình muốn khám phá vẻ đẹp của sự giao thoa giữa cấu trúc lưới kiến trúc kỷ luật và nét uyển chuyển của nét chữ uốn lượn. Sắc đỏ son ngọt ngào kết hợp ánh vàng bơ ấm áp mang lại cảm giác thân thiện, thanh lịch và tràn đầy sức sống.",
-    "deliverables": [
-      "Hệ thống Logo & Monogram Diễm",
-      "Sách Brand Guidelines 72 trang",
-      "Ấn phẩm văn phòng ép nhũ vàng ấm",
-      "Bộ quà tặng thủ công xinh xắn"
-    ],
+    "title": "THIẾT KẾ HỆ THỐNG BAO BÌ QUÀ TẶNG \"YÊU NƯỚC\"",
+    "category": "Packaging & Structural Design",
+    "type": "Đồ án học tập, đồ án chuyên ngành",
+    "scope": "Hộp quà tặng nắp gập cao cấp (Rigid Box), Hộp quai xách tiện dụng (Handled Box), Bao gói sản phẩm cuộn & bộ phụ kiện tem nhãn / thẻ tag (Hangtag)",
+    "summary": "\"Yêu Nước\" là dự án thiết kế bao bì quà tặng văn hóa nhằm tôn vinh lòng tự hào dân tộc và các giá trị biểu tượng của Việt Nam qua góc nhìn đồ họa đương đại.",
+    "description": "Đồ án tập trung nghiên cứu tối ưu hóa cấu trúc đóng gói tiện dụng kết hợp giữa nghệ thuật Typography sáng tạo nét và minh họa danh lam thắng cảnh (Cột cờ Hà Nội, Khuê Văn Các...), mang lại diện mạo trẻ trung, năng động nhưng đậm đà bản sắc cho các món quà kỷ niệm Việt Nam.",
+    "pagesCount": 12,
     "coverImage": "/assets/projects/project-01/cover.webp",
-    "gallery": [
-      "/assets/projects/project-01/cover.webp",
-      "/assets/projects/project-01/mockup.webp",
-      "/assets/projects/project-01/grid-typo.webp",
-      "/assets/projects/project-01/details.webp"
+    "coverThumb": "/assets/projects/project-01/cover-thumb.webp",
+    "pages": [
+      "/assets/projects/project-01/page-01.webp",
+      "/assets/projects/project-01/page-02.webp",
+      "/assets/projects/project-01/page-03.webp",
+      "/assets/projects/project-01/page-04.webp",
+      "/assets/projects/project-01/page-05.webp",
+      "/assets/projects/project-01/page-06.webp",
+      "/assets/projects/project-01/page-07.webp",
+      "/assets/projects/project-01/page-08.webp",
+      "/assets/projects/project-01/page-09.webp",
+      "/assets/projects/project-01/page-10.webp",
+      "/assets/projects/project-01/page-11.webp",
+      "/assets/projects/project-01/page-12.webp"
     ]
   },
   {
     "id": "02",
     "slug": "project-02",
-    "title": "Ký Họa Phố Phường Hà Nội",
-    "category": "Editorial & Publication",
-    "year": "2026",
-    "role": "Editorial Design & Layout",
-    "tags": [
-      "Editorial",
-      "Hà Nội",
-      "Artbook"
-    ],
-    "summary": "Tuyển tập sách nhỏ ghi lại những góc phố dịu dàng và nét đẹp kiến trúc Hà Nội qua góc nhìn của mình.",
-    "concept": "Ấn phẩm được mình dàn trang tỉ mỉ như một cuốn nhật ký nghệ thuật. Mình chọn chất giấy ngả vàng ấm, kết hợp ảnh chụp phim và những dòng chữ uốn lượn nhẹ nhàng để bạn đọc như đang cùng mình thong thả dạo bước qua từng con ngõ nhỏ của Thủ đô.",
-    "deliverables": [
-      "Bìa cứng áo bọc Jacket dập nhũ vàng",
-      "Dàn trang sách 196 trang khổ 210x285mm",
-      "Giấy in mỹ thuật ngả vàng Munken Lynx",
-      "Trưng bày tại tuần lễ nghệ thuật HAU"
-    ],
-    "coverImage": "/assets/projects/project-02/cover.svg",
-    "gallery": [
-      "/assets/projects/project-02/cover.svg",
-      "/assets/projects/project-02/mockup.svg",
-      "/assets/projects/project-02/grid-typo.svg",
-      "/assets/projects/project-02/details.svg"
+    "title": "THIẾT KẾ HỆ THỐNG BAO BÌ BỀN VỮNG \"REPEET\"",
+    "category": "Packaging & Structural Design",
+    "type": "Đồ án học tập, đồ án chuyên ngành",
+    "scope": "Thiết kế cấu trúc hộp mở (Dieline/Bản trải bao bì), Bộ túi giấy, Custom Typography & Họa tiết nhận diện dòng sản phẩm",
+    "summary": "REPEET là dự án bao bì hướng tới lối sống xanh, tuần hoàn tái chế (Sustainable & Eco-friendly).",
+    "description": "Đồ án tập trung giải quyết bài toán dung hòa giữa tính thân thiện với môi trường và ngôn ngữ thiết kế hiện đại, năng động, giúp các thông điệp tái chế như Re-cycle, Re-think, Re-look, Re-collect... trở nên gần gũi, thu hút với người tiêu dùng trẻ.",
+    "pagesCount": 8,
+    "coverImage": "/assets/projects/project-02/cover.webp",
+    "coverThumb": "/assets/projects/project-02/cover-thumb.webp",
+    "pages": [
+      "/assets/projects/project-02/page-01.webp",
+      "/assets/projects/project-02/page-02.webp",
+      "/assets/projects/project-02/page-03.webp",
+      "/assets/projects/project-02/page-04.webp",
+      "/assets/projects/project-02/page-05.webp",
+      "/assets/projects/project-02/page-06.webp",
+      "/assets/projects/project-02/page-07.webp",
+      "/assets/projects/project-02/page-08.webp"
     ]
   },
   {
     "id": "03",
     "slug": "project-03",
-    "title": "Shan Tea Heritage // Trà Cổ Thụ",
-    "category": "Packaging Design",
-    "year": "2026",
-    "role": "Packaging & Print Craft",
-    "tags": [
-      "Packaging",
-      "Trà Cổ Thụ",
-      "Thủ Công"
-    ],
-    "summary": "Thiết kế bao bì hộp trà cổ thụ Tây Bắc với kết cấu mở hộp xinh xắn không dùng keo dán.",
-    "concept": "Tôn vinh búp chè shan tuyết cổ thụ bằng ngôn ngữ đồ họa mộc mạc và ấm áp. Hộp giấy kraft bồi dày màu vàng bơ kết hợp đường viền chỉ đỏ son và biểu tượng mạ nhũ vàng kim tinh tế, mang lại trải nghiệm mở hộp đầy niềm vui và bất ngờ.",
-    "deliverables": [
-      "Cấu trúc hộp mở 3 tầng độc đáo",
-      "Minh họa phong cảnh núi rừng Tây Bắc",
-      "Khuôn dập nổi mù & ép nhũ vàng 24k",
-      "Hũ gốm tráng men mờ thủ công"
-    ],
-    "coverImage": "/assets/projects/project-03/cover.svg",
-    "gallery": [
-      "/assets/projects/project-03/cover.svg",
-      "/assets/projects/project-03/mockup.svg",
-      "/assets/projects/project-03/grid-typo.svg",
-      "/assets/projects/project-03/details.svg"
+    "title": "THIẾT KẾ BỘ LỊCH VĂN HÓA \"DÂN HOA GIÁP VIỆT\"",
+    "category": "Thiết kế Ấn phẩm Tết / Quà tặng sự kiện",
+    "type": "Đồ án học tập, đồ án chuyên ngành",
+    "scope": "Minh họa biểu trưng, Thiết kế lịch để bàn/treo tường, Bao bì & Bộ quà tặng đi kèm (Túi vải, bao lì xì, sản phẩm phụ trợ)",
+    "summary": "Tôn vinh giá trị văn hóa dân gian Việt Nam trong nhịp sống đương đại qua hình tượng 12 con giáp.",
+    "description": "Lấy cảm hứng từ chất liệu mộc mạc của nghệ thuật tranh khắc gỗ Đông Hồ kết hợp cùng hoa văn thổ cẩm truyền thống, dự án tái hiện hình tượng 12 con giáp dưới góc nhìn thị giác tươi mới và gần gũi.",
+    "pagesCount": 7,
+    "coverImage": "/assets/projects/project-03/cover.webp",
+    "coverThumb": "/assets/projects/project-03/cover-thumb.webp",
+    "pages": [
+      "/assets/projects/project-03/page-01.webp",
+      "/assets/projects/project-03/page-02.webp",
+      "/assets/projects/project-03/page-03.webp",
+      "/assets/projects/project-03/page-04.webp",
+      "/assets/projects/project-03/page-05.webp",
+      "/assets/projects/project-03/page-06.webp",
+      "/assets/projects/project-03/page-07.webp"
     ]
   },
   {
     "id": "04",
     "slug": "project-04",
-    "title": "Chữ Động Đông Dương // Typo Experiment",
-    "category": "Typography & Poster",
-    "year": "2025",
-    "role": "Experimental Poster",
-    "tags": [
-      "Typography",
-      "Đông Dương",
-      "Poster"
-    ],
-    "summary": "Chuỗi poster thể nghiệm nghệ thuật chữ uốn lượn, kết hợp giữa phong vị Đông Dương xưa và nhịp điệu đồ hoạ hiện đại.",
-    "concept": "Mình tháo rời các con chữ bảng hiệu phố cổ, rồi vẽ lại bằng những đường lượn mềm mại và khối hình học tươi sáng. Sự rung động giữa sắc đỏ dâu và vàng ấm tạo cho chuỗi poster một nguồn năng lượng thị giác thật trong trẻo và duyên dáng.",
-    "deliverables": [
-      "Bộ 05 poster khổ B1 in lụa thủ công",
-      "Motion typography video loop",
-      "Zine mini kỷ niệm hành trình làm chữ"
-    ],
-    "coverImage": "/assets/projects/project-04/cover.svg",
-    "gallery": [
-      "/assets/projects/project-04/cover.svg",
-      "/assets/projects/project-04/mockup.svg",
-      "/assets/projects/project-04/grid-typo.svg",
-      "/assets/projects/project-04/details.svg"
+    "title": "TÁI ĐỊNH VỊ & THIẾT KẾ NHẬN DIỆN THƯƠNG HIỆU \"STAR KOMBUCHA\"",
+    "category": "Brand Identity & Packaging Design",
+    "type": "Đồ án học tập, đồ án chuyên ngành",
+    "scope": "Thiết kế Logo & Brand Guidelines, Hệ thống bao bì lon & hộp quà tặng (Packaging), Ấn phẩm truyền thông",
+    "summary": "Làm mới hình ảnh thương hiệu trà lên men tự nhiên vì sức khỏe cho giới trẻ năng động.",
+    "description": "Đồ án đặt ra bài toán làm mới hình ảnh thương hiệu: vừa giữ được tinh thần sảng khoái, tự nhiên, vừa tạo nên ngôn ngữ thị giác hiện đại, bắt mắt và có tính cạnh tranh cao trên quầy kệ siêu thị.",
+    "pagesCount": 10,
+    "coverImage": "/assets/projects/project-04/cover.webp",
+    "coverThumb": "/assets/projects/project-04/cover-thumb.webp",
+    "pages": [
+      "/assets/projects/project-04/page-01.webp",
+      "/assets/projects/project-04/page-02.webp",
+      "/assets/projects/project-04/page-03.webp",
+      "/assets/projects/project-04/page-04.webp",
+      "/assets/projects/project-04/page-05.webp",
+      "/assets/projects/project-04/page-06.webp",
+      "/assets/projects/project-04/page-07.webp",
+      "/assets/projects/project-04/page-08.webp",
+      "/assets/projects/project-04/page-09.webp",
+      "/assets/projects/project-04/page-10.webp"
     ]
   },
   {
     "id": "05",
     "slug": "project-05",
-    "title": "Pavilion Triển Lãm HAU",
-    "category": "Spatial Graphics",
-    "year": "2025",
-    "role": "Wayfinding & Signage",
-    "tags": [
-      "Không Gian",
-      "Triển Lãm",
-      "HAU"
-    ],
-    "summary": "Hệ thống biển chỉ dẫn và nhận diện không gian triển lãm sáng tạo cho sinh viên ĐH Kiến trúc Hà Nội.",
-    "concept": "Mình thiết kế hệ thống ký hiệu hoa văn đáng yêu, kết hợp typography uốn lượn trên các lối đi và vách tường, biến không gian triển lãm khô cứng thành một khu vườn nghệ thuật rực rỡ sắc màu để mọi người cùng dạo chơi.",
-    "deliverables": [
-      "Bộ ký hiệu chỉ dẫn (Pictogram)",
-      "Bản đồ không gian triển lãm 3D",
-      "Poster giới thiệu từng khu vực đồ án",
-      "Thẻ đeo sự kiện và sticker kỷ niệm"
-    ],
-    "coverImage": "/assets/projects/project-05/cover.svg",
-    "gallery": [
-      "/assets/projects/project-05/cover.svg",
-      "/assets/projects/project-05/mockup.svg",
-      "/assets/projects/project-05/grid-typo.svg",
-      "/assets/projects/project-05/details.svg"
+    "title": "THIẾT KẾ BÌA SÁCH \"GIẾT CON CHIM NHẠI\"",
+    "category": "Book Cover & Editorial Design",
+    "type": "Đồ án học tập",
+    "scope": "Custom Typography, Minh họa biểu trưng, Dàn trang",
+    "summary": "Bản tuyên ngôn sâu sắc về sự ngây thơ, công lý và định kiến xã hội qua lăng kính cô bé Scout.",
+    "description": "Lấy bối cảnh miền Nam nước Mỹ những năm 1930 qua lăng kính ngây thơ của cô bé Scout, 'Giết con chim nhại' xoay quanh cuộc đấu tranh bảo vệ công lý của luật sư Atticus Finch cho một người da đen bị hàm oan.",
+    "pagesCount": 3,
+    "coverImage": "/assets/projects/project-05/cover.webp",
+    "coverThumb": "/assets/projects/project-05/cover-thumb.webp",
+    "pages": [
+      "/assets/projects/project-05/page-01.webp",
+      "/assets/projects/project-05/page-02.webp",
+      "/assets/projects/project-05/page-03.webp"
     ]
   },
   {
     "id": "06",
     "slug": "project-06",
-    "title": "Terra Botanica Luxury",
-    "category": "Packaging Design",
-    "year": "2024",
-    "role": "Packaging & Structural Design",
-    "tags": [
-      "Bao Bì",
-      "Hữu Cơ",
-      "Giấy Tái Chế"
-    ],
-    "summary": "Thiết kế bao bì mỹ phẩm thuần chay sinh thái, ứng dụng chất liệu giấy xơ thực vật vàng ấm và mực in đậu nành.",
-    "concept": "Kết hợp nét thanh lịch nhẹ nhàng với tình yêu dành cho thiên nhiên. Sắc vàng mật ong ấm áp kết hợp các điểm xuyết đỏ dâu trên nền giấy thủ công, gửi gắm thông điệp chăm sóc bản thân với sự nâng niu dịu dàng nhất.",
-    "deliverables": [
-      "Bộ chai thủy tinh mờ dập nổi biểu tượng",
-      "Hộp giấy carton tái chế tự gập xinh xắn",
-      "Tem niêm phong ép nhiệt đỏ son",
-      "Lookbook giới thiệu sản phẩm"
-    ],
-    "coverImage": "/assets/projects/project-06/cover.svg",
-    "gallery": [
-      "/assets/projects/project-06/cover.svg",
-      "/assets/projects/project-06/mockup.svg",
-      "/assets/projects/project-06/grid-typo.svg",
-      "/assets/projects/project-06/details.svg"
-    ]
-  },
-  {
-    "id": "07",
-    "slug": "project-07",
-    "title": "Hồi Sinh Di Sản Kiến Trúc Hà Nội",
-    "category": "Graduation Project",
-    "year": "2027",
-    "role": "Lead Visual Designer",
-    "tags": [
-      "Tốt Nghiệp",
-      "Di Sản Hà Nội",
-      "Capstone 2027"
-    ],
-    "summary": "Đồ án Tốt nghiệp 2027: Dự án nghiên cứu bảo tồn và tái hiện nét đẹp hoa văn trên các công trình kiến trúc cổ Hà Nội.",
-    "concept": "Đồ án tốt nghiệp kết tinh hành trình học tập khóa 2023-2027 của mình tại Đại học Kiến trúc Hà Nội. Mình đã thu thập, chụp ảnh và vector hoá các họa tiết hoa sắt, gạch hoa thông gió, gốm sứ cổ truyền thành một thư viện đồ hoạ ứng dụng hiện đại, ngọt ngào và tràn đầy sức sống mới.",
-    "deliverables": [
-      "Bộ sách nghiên cứu đồ án 250 trang",
-      "Thư viện số 120+ hoa văn vector di sản",
-      "Hệ thống quà tặng lưu niệm văn hóa",
-      "Không gian trưng bày tốt nghiệp 3x3m tại HAU"
-    ],
-    "coverImage": "/assets/projects/project-07/cover.svg",
-    "gallery": [
-      "/assets/projects/project-07/cover.svg",
-      "/assets/projects/project-07/mockup.svg",
-      "/assets/projects/project-07/grid-typo.svg",
-      "/assets/projects/project-07/details.svg"
+    "title": "THIẾT KẾ SỰ KIỆN TRIỂN LÃM TƯƠNG TÁC \"Ồ Ố Ạ\"",
+    "category": "Brand Activation & Illustration Exhibition",
+    "type": "Đồ án học tập, nghiên cứu trải nghiệm",
+    "scope": "Kích hoạt thương hiệu kết hợp Triển lãm nghệ thuật minh họa & Workshop trải nghiệm (dựa trên Lionbooks)",
+    "summary": "Khởi nguồn từ 3 cảm xúc tự nhiên của trẻ nhỏ: Bất ngờ (Ồ!) - Tò mò (Ố?) - Thấu hiểu, vỡ òa (Ạ!).",
+    "description": "'Ồ Ố Ạ' không chỉ là nơi trẻ em vui chơi, mà còn là nhịp cầu để người lớn soi chiếu lại thế giới qua góc nhìn hồn nhiên của con trẻ — cùng học cách lắng nghe, làm bạn và sẻ chia cảm xúc.",
+    "pagesCount": 15,
+    "coverImage": "/assets/projects/project-06/cover.webp",
+    "coverThumb": "/assets/projects/project-06/cover-thumb.webp",
+    "pages": [
+      "/assets/projects/project-06/page-01.webp",
+      "/assets/projects/project-06/page-02.webp",
+      "/assets/projects/project-06/page-03.webp",
+      "/assets/projects/project-06/page-04.webp",
+      "/assets/projects/project-06/page-05.webp",
+      "/assets/projects/project-06/page-06.webp",
+      "/assets/projects/project-06/page-07.webp",
+      "/assets/projects/project-06/page-08.webp",
+      "/assets/projects/project-06/page-09.webp",
+      "/assets/projects/project-06/page-10.webp",
+      "/assets/projects/project-06/page-11.webp",
+      "/assets/projects/project-06/page-12.webp",
+      "/assets/projects/project-06/page-13.webp",
+      "/assets/projects/project-06/page-14.webp",
+      "/assets/projects/project-06/page-15.webp"
     ]
   }
 ]

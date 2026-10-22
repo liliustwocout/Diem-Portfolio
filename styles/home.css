@@ -1,0 +1,69 @@
+/* Section chọn dự án: 1 trang đầy đủ màn hình, cùng nhịp với hero/about */
+#works {
+  min-height: 100vh;
+  background: #fdf6ee; /* sẽ được đổi theo màu nền trang About bằng JS */
+  color: #4a3535;
+  font-family: 'Quicksand', sans-serif;
+  scroll-snap-align: start;
+}
+.works-inner {
+  min-height: 100vh;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: clamp(24px, 4vh, 48px) clamp(24px, 4vw, 64px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(16px, 3vh, 32px);
+}
+.works-head { text-align: center; }
+.works-eyebrow { font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.6; margin-bottom: 6px; }
+.works-head h2 { font-size: clamp(26px, 3.4vw, 44px); font-weight: 700; }
+
+/* Lưới 3 x 2 đều nhau, ảnh mờ -> hover nét + phóng to */
+.projects-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(14px, 2vw, 28px);
+  align-content: center;
+}
+.project-card { display: flex; flex-direction: column; gap: 10px; color: inherit; text-decoration: none; }
+.project-thumb {
+  overflow: hidden;
+  border-radius: 14px;
+  aspect-ratio: 297 / 210;
+  box-shadow: 0 6px 20px rgba(74, 53, 53, 0.12);
+  transition: box-shadow 0.4s, transform 0.4s;
+}
+.project-thumb img {
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: all 0.45s ease;
+}
+/* Chỉ thiết bị có chuột mới làm mờ và hover; điện thoại cảm ứng luôn nét */
+@media (hover: hover) and (pointer: fine) {
+  .project-thumb img { filter: blur(3px) grayscale(15%); opacity: 0.7; }
+  .project-card:hover .project-thumb { box-shadow: 0 14px 34px rgba(74, 53, 53, 0.22); transform: translateY(-4px); }
+  .project-card:hover img { filter: none; opacity: 1; transform: scale(1.06); }
+}
+.project-card:active .project-thumb { transform: scale(0.98); }
+
+.project-meta { display: flex; flex-direction: column; gap: 2px; }
+.project-num { font-size: 12px; font-weight: 700; letter-spacing: 0.15em; opacity: 0.55; }
+.project-name {
+  font-size: 14px; font-weight: 600; line-height: 1.35;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+.works-footer {
+  display: flex; justify-content: space-between; align-items: center;
+  padding-top: 16px; border-top: 1px solid rgba(74, 53, 53, 0.15);
+  font-size: 14px; font-weight: 600;
+}
+.socials { display: flex; gap: 24px; }
+.socials a { color: inherit; text-decoration: none; transition: color 0.2s; }
+.socials a:hover { color: #e05660; }
+
+@media (max-width: 900px) { .projects-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .projects-grid { grid-template-columns: 1fr; } }

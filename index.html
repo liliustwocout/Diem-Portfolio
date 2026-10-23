@@ -7,7 +7,7 @@
   <title>Trần Phương Diễm — Portfolio Thiết kế Đồ hoạ (HAU 2023 - 2027)</title>
   <meta name="description"
     content="Portfolio thiết kế đồ họa của Trần Phương Diễm, sinh viên khóa 2023-2027 Đại học Kiến trúc Hà Nội (HAU)." />
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap&subset=vietnamese"
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Dancing+Script:wght@600;700&display=swap&subset=vietnamese"
     rel="stylesheet" />
   <link rel="stylesheet" href="/style.css" />
 </head>
@@ -15,6 +15,21 @@
 <body>
   <!-- TRANG CHỦ: mỗi trang PDF là 1 màn hình hoàn chỉnh -->
   <main id="home-view">
+    <!-- Trang trí hai bên trang chủ: ruy băng bay, chữ chạy dọc, cánh hoa trôi -->
+    <div class="side-deco" aria-hidden="true">
+      <svg class="sd-ribbon sd-l" viewBox="0 0 100 1000" preserveAspectRatio="none">
+        <path class="sd-a" d="M80 0 C 10 120, 90 240, 30 380 S 10 600, 70 720 S 90 900, 40 1000" />
+        <path class="sd-b" d="M60 0 C 90 140, 20 260, 60 400 S 90 620, 30 740 S 20 920, 70 1000" />
+      </svg>
+      <svg class="sd-ribbon sd-r" viewBox="0 0 100 1000" preserveAspectRatio="none">
+        <path class="sd-a" d="M80 0 C 10 120, 90 240, 30 380 S 10 600, 70 720 S 90 900, 40 1000" />
+        <path class="sd-b" d="M60 0 C 90 140, 20 260, 60 400 S 90 620, 30 740 S 20 920, 70 1000" />
+      </svg>
+      <div class="sd-text sd-text-l"><div class="sd-track"></div></div>
+      <div class="sd-text sd-text-r"><div class="sd-track"></div></div>
+      <div class="sd-petals"></div>
+    </div>
+
     <section id="hero" class="page"><img src="/assets/pages/hero.webp" alt="Trần Phương Diễm — Portfolio" /></section>
     <section id="about" class="page"><img src="/assets/pages/about.webp" alt="Về mình" /></section>
     <section id="works">
@@ -38,6 +53,17 @@
   <!-- TRANG ĐỒ ÁN: các trang PDF xếp dọc, tràn màn hình -->
   <div id="project-view" class="hidden">
     <div id="pj-pages-list"></div>
+    <!-- Ruy băng trang trí hai bên (chỉ hiện ở màn hình rộng) -->
+    <div class="ribbons" aria-hidden="true">
+      <svg class="ribbon ribbon-l" viewBox="0 0 100 1000" preserveAspectRatio="none">
+        <path class="rb rb-a" pathLength="1" d="M80 0 C 10 120, 90 240, 30 380 S 10 600, 70 720 S 90 900, 40 1000" />
+        <path class="rb rb-b" pathLength="1" d="M60 0 C 90 140, 20 260, 60 400 S 90 620, 30 740 S 20 920, 70 1000" />
+      </svg>
+      <svg class="ribbon ribbon-r" viewBox="0 0 100 1000" preserveAspectRatio="none">
+        <path class="rb rb-a" pathLength="1" d="M80 0 C 10 120, 90 240, 30 380 S 10 600, 70 720 S 90 900, 40 1000" />
+        <path class="rb rb-b" pathLength="1" d="M60 0 C 90 140, 20 260, 60 400 S 90 620, 30 740 S 20 920, 70 1000" />
+      </svg>
+    </div>
     <button id="project-back-btn" class="fab fab-back" aria-label="Quay lại">&larr; Quay lại</button>
     <button id="back-to-top-btn" class="fab fab-top" aria-label="Lên đầu trang">&uarr;</button>
   </div>

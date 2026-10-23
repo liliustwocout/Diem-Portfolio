@@ -134,6 +134,7 @@ if (matchMedia('(hover: hover) and (pointer: fine)').matches && !reduceMotion) {
 const sideDeco = document.querySelector('.side-deco');
 const phrase = 'TRẦN PHƯƠNG DIỄM • GRAPHIC DESIGNER • ';
 document.querySelectorAll('.sd-track').forEach(t => { t.textContent = phrase.repeat(8); });
+document.querySelectorAll('.mq-track').forEach(t => { t.textContent = phrase.repeat(12); });
 // Ẩn phần trang trí khi cuộn tới khu chọn dự án (không còn khoảng trống hai bên)
 new IntersectionObserver(([en]) => sideDeco.classList.toggle('off', en.intersectionRatio > 0.4), { threshold: [0, 0.4, 0.6] })
   .observe(document.getElementById('works'));

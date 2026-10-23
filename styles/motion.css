@@ -62,6 +62,14 @@
 }
 .project-thumb.tilting::after { opacity: 1; }
 
+/* Mobile / tablet / màn hình dọc: chữ chạy chuyển thành dải ngang dưới trang 1 và trang 2 */
+.mq-strip { overflow: hidden; background: #fdf6ee; border-block: 1px solid rgba(224, 86, 96, 0.25); padding: 10px 0; }
+.mq-track { display: flex; width: max-content; white-space: nowrap; font: 700 clamp(13px, 2.4vw, 18px) 'Quicksand', sans-serif;
+  letter-spacing: 0.3em; color: #e05660; animation: mq-run 90s linear infinite; }
+.mq-rev .mq-track { animation-direction: reverse; color: #c9798a; }
+@keyframes mq-run { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (min-aspect-ratio: 16/10) and (min-width: 900px) { .mq-strip { display: none; } }
+
 /* Cột thumbnail dọc bên trái trang dự án (chỉ hiện khi có khoảng trống hai bên) */
 #pj-thumbs { display: none; }
 @media (min-aspect-ratio: 16/10) and (min-width: 900px) {

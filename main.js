@@ -62,6 +62,27 @@ function navigateTo(url, push = true) {
   else go();
 }
 
+// Cột thumbnail dọc: bấm để cuộn tới trang, trang đang xem được làm nổi bật
+const thumbsNav = document.getElementById('pj-thumbs');
+let pageObserver;
+function buildThumbs(p) {
+  pageObserver?.disconnect();
+  thumbsNav.innerHTML = p.pages.map((src, i) =>
+    `<button class="pj-thumb" data-i="${i}" aria-label="Trang ${i + 1}"><img src="${src}" alt="" loading="lazy" /><span>${i + 1}</span></button>`).join('');
+  const btns = [...thumbsNav.children];
+  const pages = [...list.children];
+  btns.forEach((b, i) => b.addEventListener('click', () => pages[i].scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth' })));
+  pageObserver = new IntersectionObserver(entries => entries.forEach(en => {
+    if (!en.isIntersecting) return;
+    const b = btns[pages.indexOf(en.target)];
+    btns.forEach(x => x.classList.toggle('active', x === b));
+    thumbsNav.scrollTo({ top: b.offsetTop - thumbsNav.clientHeight / 2 + b.offsetHeight / 2, behavior: 'smooth' });
+  }), { rootMargin: '-45% 0px -45% 0px' });
+  pages.forEach(pg => pageObserver.observe(pg));
+  btns[0]?.classList.add('active');
+  thumbsNav.scrollTop = 0;
+}
+
 function handleRoute() {
   const m = location.pathname.match(/^\/project-(\d+)\/?$/);
   const p = m && projects[parseInt(m[1], 10) - 1];
@@ -74,6 +95,7 @@ function handleRoute() {
     const imgs = list.querySelectorAll('img');
     if (imgs[0] && document.querySelector('.project-thumb img[style*="cover"]')) imgs[0].style.viewTransitionName = 'cover';
     reveal([...imgs].slice(1));
+    buildThumbs(p);
     document.title = `${p.title} — Trần Phương Diễm`;
     window.scrollTo(0, 0);
   } else {
@@ -112,31 +134,11 @@ if (matchMedia('(hover: hover) and (pointer: fine)').matches && !reduceMotion) {
 const sideDeco = document.querySelector('.side-deco');
 const phrase = 'TRẦN PHƯƠNG DIỄM • GRAPHIC DESIGNER • ';
 document.querySelectorAll('.sd-track').forEach(t => { t.textContent = phrase.repeat(8); });
-const petals = document.querySelector('.sd-petals');
-for (let i = 0; i < 14; i++) {
-  const s = document.createElement('span');
-  const left = i % 2 === 0;
-  const pos = `calc(var(--g) * ${(0.15 + Math.random() * 0.7).toFixed(2)})`;
-  s.style[left ? 'left' : 'right'] = pos;
-  s.style.cssText += `;--s:${8 + Math.random() * 10}px;--t:${14 + Math.random() * 12}s;--dl:${-Math.random() * 20}s;--dx:${(Math.random() - 0.5) * 80}px;--r:${(Math.random() > 0.5 ? 1 : -1) * (180 + Math.random() * 360)}deg`;
-  petals.appendChild(s);
-}
 // Ẩn phần trang trí khi cuộn tới khu chọn dự án (không còn khoảng trống hai bên)
 new IntersectionObserver(([en]) => sideDeco.classList.toggle('off', en.intersectionRatio > 0.4), { threshold: [0, 0.4, 0.6] })
   .observe(document.getElementById('works'));
 
 window.addEventListener('popstate', handleRoute);
-
-// Ruy băng tự vẽ theo tiến độ cuộn (làm mượt bằng nội suy)
-const ribbons = document.querySelector('.ribbons');
-let rbCur = 0;
-(function tick() {
-  const max = document.documentElement.scrollHeight - innerHeight;
-  const target = max > 0 ? Math.min(1, scrollY / max) : 0;
-  rbCur += (target - rbCur) * 0.08;
-  ribbons.style.setProperty('--p', (0.06 + rbCur * 0.94).toFixed(4));
-  requestAnimationFrame(tick);
-})();
 
 fetch('/data/projects.json').then(r => r.json()).then(data => {
   projects = data;
